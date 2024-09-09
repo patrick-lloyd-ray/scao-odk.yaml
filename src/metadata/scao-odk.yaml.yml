@@ -1,0 +1,28 @@
+# PURL configuration for http://purl.obolibrary.org/obo/scao-odk.yaml
+
+idspace: SCAO-ODK.YAML
+base_url: /obo/scao-odk.yaml
+
+products:
+- scao-odk.yaml.owl: https://raw.githubusercontent.com//scao-odk.yaml/main/scao-odk.yaml.owl
+- scao-odk.yaml.obo: https://raw.githubusercontent.com//scao-odk.yaml/main/scao-odk.yaml.obo
+
+term_browser: ontobee
+example_terms:
+- SCAO-ODK.YAML_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com//scao-odk.yaml/v
+
+- prefix: /tracker/
+  replacement: https://github.com//scao-odk.yaml/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/SCAO-ODK.YAML?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com//scao-odk.yaml/main/
+
